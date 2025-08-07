@@ -1,19 +1,11 @@
-[
-phases.setup
-]
+[phases.setup]
 nixPkgs = ['python39', 'pip']
 
-[
-phases.install
-]
+[phases.install]
 cmds = ['pip install -r requirements.txt']
 
-[
-phases.build
-]
+[phases.build]
 cmds = ['echo "No build step required"']
 
-[
-start
-]
+[start]
 cmd = 'gunicorn --bind 0.0.0.0:$PORT --workers 1 --timeout 120 app:app'
