@@ -1,9 +1,5 @@
-[
-variables
-]
+[variables]
 PYTHON_VERSION = "3.9"
 
-[
-start
-]
+[start]
 cmd = "gunicorn --bind 0.0.0.0:$PORT --workers 1 --timeout 120 app:app"
